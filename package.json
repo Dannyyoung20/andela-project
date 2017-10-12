@@ -1,0 +1,21 @@
+{
+  "name": "andlea_project",
+  "version": "1.0.0",
+  "description": "A simple andela project",
+  "main": "index.js",
+  "scripts": {
+    "run": "nodemon ./app"
+  },
+  "author": "Eze Daniel",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "4.15.2",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "express-validator": "^4.2.1",
+    "mongoose": "^4.12.1"
+  }
+}

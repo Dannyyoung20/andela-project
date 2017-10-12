@@ -1,0 +1,53 @@
+require("dotenv").load();
+// Load dependecies
+const express = require("express");
+const bodyParser = require("body-parser");
+const session = require("express-session");
+const mongoose = require("mongoose");
+const flash = require("express-flash");
+const hbs = require("express-handlebars");
+const debug = require('debug')('andela:server');
+const http = require('http');
+const path = require("path");
+const expressValidator = require("express-validator");
+const port = process.env.PORT || '3000';
+
+const app = express();
+
+var index = require("./routes/index");
+
+// Connect to the mongodb lib via mongoose
+mongoose.connect(process.env.MONGO_URI, {
+    useMongoClient: true,
+    promiseLibrary: require("bluebird")
+});
+// Set mongoose promise lib.
+mongoose.Promise = require("bluebird");
+
+// Initialize Middleware
+app.use(session({
+    secret: process.env.SESS_SECRET,
+    resave: false,
+    saveUninitialized: true
+}));
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(flash());
+app.use(expressValidator())
+
+// Set html view engine 
+app.engine("hbs", hbs(process.env.HBS_OPTIONS));
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+// Set static folder path
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', index)
+
+// Set the port address of the app
+app.set('port', port);
+
+const server = http.createServer(app);
+
+server.listen(port);
