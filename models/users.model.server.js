@@ -18,8 +18,7 @@ let userSchema = new Schema({
     department: {
         required: true,
         type: String
-    },
-    created_at: new Date()
+    }
 });
 
 var User = mongoose.model('Users', userSchema);
