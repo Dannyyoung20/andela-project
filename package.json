@@ -4,7 +4,7 @@
   "description": "A simple andela project",
   "main": "index.js",
   "scripts": {
-    "run": "nodemon ./app"
+    "start": "nodemon ./app.js"
   },
   "author": "Eze Daniel",
   "license": "MIT",
