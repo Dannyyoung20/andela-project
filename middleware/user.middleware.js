@@ -23,5 +23,9 @@ module.exports = {
                 })
             }
         }
+    },
+
+    getUserById: (req, res) => {
+        User.findById()
     }
 }

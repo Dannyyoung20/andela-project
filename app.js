@@ -11,6 +11,7 @@ const http = require('http');
 const path = require("path");
 const expressValidator = require("express-validator");
 const port = process.env.PORT || '3000';
+const favicon = require("serve-favicon");
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use(session({
     saveUninitialized: true
 }));
 
+app.use(favicon(path.join(__dirname, 'public','img', 'icon.png')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(flash());

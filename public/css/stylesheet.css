@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: 'Roboto Slab', Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #FC4349;
+}
+
+.main-layout {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #FC4349;
+}
+
+.mini-sidenav {
+    background: #fff;
+    width: 55px;
+    height: 100%;
+    position: absolute;
+    box-shadow: -4px 3px 16px 10px rgba(0, 0, 0, 0.12)
+}
+
+.mini-layout {
+    position: relative;
+    height: 100%;
+    padding: 0 7px;
+    margin-top: 5px;
+}
+
+.mini-nav-list {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.mini-nav-list li {
+    list-style: none;
+    height: 33.33%;
+    text-align: center;
+}
+
+.mini-nav-logo {
+    position: relative;
+}
+
+.mini-nav-logo span {
+    width: 30px;
+    height: 2px;
+    background: #222233;
+    display: block;
+    margin: 5px 0px;
+    border-radius: 3px;
+}
+
+.mini-nav-logo a {
+    cursor: pointer;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.mini-brand {
+    text-align: center;
+}
+
+.mini-brand-child {
+    font-size: 40px;
+    transform: translateY(10px);
+    line-height: 4;
+    text-shadow: -2px 1px 2px rgba(0,0,0,0.14);
+    font-family: 'Roboto Slab';
+}
+
+.mini-fa {
+    font-size: 20px;
+    line-height: 20;
+    text-align: center;
+}
+
+svg {
+    height: 29px;
+}
