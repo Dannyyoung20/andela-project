@@ -18,7 +18,11 @@ let userSchema = new Schema({
     department: {
         required: true,
         type: String
-    }
+    },
+    phone: {
+        required: true,
+        type: String
+    },
 });
 
 var User = mongoose.model('Users', userSchema);

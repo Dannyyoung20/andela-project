@@ -7,6 +7,9 @@ router.route('/')
     })
     .post(user.postUser);
 
-
+router.route('/canvas')
+    .get(function(req, res) {
+        res.render('canvas');
+    })
 
 module.exports = router;

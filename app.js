@@ -1,4 +1,5 @@
 require("dotenv").load();
+
 // Load dependecies
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -12,6 +13,7 @@ const path = require("path");
 const expressValidator = require("express-validator");
 const port = process.env.PORT || '3000';
 const favicon = require("serve-favicon");
+const api = require('./routes/api');
 
 const app = express();
 
@@ -36,21 +38,24 @@ app.use(favicon(path.join(__dirname, 'public','img', 'icon.png')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(flash());
-app.use(expressValidator())
+app.use(expressValidator());
 
 // Set html view engine 
 app.engine("hbs", hbs(process.env.HBS_OPTIONS));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
+
 // Set static folder path
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index)
+app.use('/', index);
+app.use('/api', api);
 
 
 // Set the port address of the app
 app.set('port', port);
 
+// Run the server
 const server = http.createServer(app);
 
 server.listen(port);

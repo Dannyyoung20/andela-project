@@ -14,7 +14,8 @@ module.exports = {
                 firstName: req.body.firstname,
                 lastName: req.body.lastname,
                 email: req.body.email,
-                department: req.body.department
+                department: req.body.department,
+                phone: req.body.phone
             })
 
             if(user) {
