@@ -51,6 +51,17 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/api', api);
 
+// Handle the 404 Errors
+app.use(function(req, res, next) {
+    res.status(404);
+    
+    if(req.accepts('html')) {
+        res.render('404', {url: req.url});
+        return;
+    }
+    next();    
+})
+
 
 // Set the port address of the app
 app.set('port', port);

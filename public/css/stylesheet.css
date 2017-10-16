@@ -192,6 +192,18 @@ button {
     color: #fff;
 }
 
+.cs-404 {
+    text-align: center;
+    font-family: 'Roboto Slab';
+    margin-top: 20%;
+    color: #fff;
+}
+
+.error {
+    background: #F0433A;
+    background-size: cover;
+}
+
 svg {
     height: 29px;
 }
