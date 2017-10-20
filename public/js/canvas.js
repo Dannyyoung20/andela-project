@@ -76,13 +76,13 @@ function Circle(x, y, radius, dx, dy) {
 
 function init() {
     circleArray = [];
-    for(var i = 0; i < 200; i++) {
+    for(var i = 0; i < 40; i++) {
 
-    var x = Math.random() * (innerWidth - r * 2) + r;
-    var y = Math.random() * (innerHeight - r * 2) + r;
+    var x = Math.random() * (300 - r * 2) + r;
+    var y = Math.random() * (300 - r * 2) + r;
     var dx = (Math.random() - 0.5) * 8;
     var dy = (Math.random() - 0.5) * 8;
-    var r = Math.random() * 3 + 1;
+    var r = Math.random() * 10 + 1;
     
     circleArray.push(new Circle(x, y, r, dx, dy));
 
