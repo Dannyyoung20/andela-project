@@ -64,7 +64,6 @@ app.use(function(req, res, next) {
 
 app.use(function(err, req, res, next) {
     // Sets the erros to a local variable message
-    req.locals.message = err.message;
     req.locals.errors = process.env.NODE_DEV === 'development' ? err : {};
 });
 
