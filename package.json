@@ -4,7 +4,7 @@
   "description": "A simple andela project",
   "main": "index.js",
   "scripts": {
-    "start": "npm ./app.js"
+    "start": "node ./app.js"
   },
   "author": "Eze Daniel",
   "license": "MIT",
