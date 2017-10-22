@@ -42,7 +42,7 @@ app.use(expressValidator());
 
 // Set html view engine 
 app.engine("hbs", hbs(process.env.HBS_OPTIONS));
-app.set('views', __dirname+ 'views');
+app.set('views', path.resolve(__dirname, 'viwes'));
 app.set('view engine', 'hbs');
 
 // Set static folder path
