@@ -448,6 +448,34 @@ button {
     color: #fff;
 }
 
+.btn {
+    height: 100%;
+    padding: 1.2em 4em;
+    background: rgb(255, 88, 93);
+    box-shadow: 12px 15px 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: 0.135em;
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    transition: 0.2s box-shadow ease-in-out, 0.2s background-color ease-in-out;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: rgb(247, 55, 65);;
+    color: #fff;
+    box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.1);
+}
+
 .error {
     background: #F0433A;
     background-size: cover;
@@ -643,7 +671,7 @@ button {
     height: 1.5rem;
     background-size: cover;
     background-position: center;
-    width: 19%;
+    width: 15%;
     height: 15%;
     border-radius: 50%;
     margin-top: -10px;
@@ -653,6 +681,19 @@ button {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+}
+
+.user-form .row {
+    margin: 10px 0px;
+}
+
+.user-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.user-form input {
+    width: 100%;
 }
 
 @media screen and (min-width: 62rem){
