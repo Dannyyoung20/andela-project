@@ -34,7 +34,6 @@ app.use(session({
     saveUninitialized: true
 }));
 
-app.use(favicon(path.resolve(__dirname, 'public','img', 'icon.png')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(flash());
@@ -42,11 +41,11 @@ app.use(expressValidator());
 
 // Set html view engine 
 app.engine("hbs", hbs(process.env.HBS_OPTIONS));
-app.set('views', './views');
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
 // Set static folder path
-app.use(express.static(path.resolve(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/api', api);
