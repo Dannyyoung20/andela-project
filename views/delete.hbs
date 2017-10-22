@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Andela Learning Community</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="/fa/css/font-awesome.min.css" type="text/css" rel="stylesheet" />
+    <link href="/css/stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main-layout-2">
+        <div class="mini-sidenav">
+            <div class="mini-layout">
+                <ul class="mini-nav-list">
+                    <li class="mini-nav-logo">
+                        <a>
+                            <svg enable-background="new 0 0 91 91" height="40px" id="Layer_1" version="1.1" viewBox="0 0 91 91" xml:space="preserve"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <g>
+                                    <path stroke="null" id="svg_5" fill="#ffffff" d="m46.719599,24.769792l-43.518844,0c-0.709702,0 -1.284929,-1.125 -1.284929,-2.512c0,-1.389 0.575227,-2.514 1.284929,-2.514l43.518844,0c0.709702,0 1.284929,1.125 1.284929,2.514c0,1.387 -0.575227,2.512 -1.284929,2.512z"
+                                    />
+                                    <path d="M88.3,43.367H3.188c-1.388,0-2.513-1.125-2.513-2.514c0-1.387,1.125-2.512,2.513-2.512H88.3   c1.388,0,2.513,1.125,2.513,2.512C90.813,42.242,89.688,43.367,88.3,43.367z"
+                                        fill="#ffffff" />
+                                    <path stroke="null" id="svg_7" fill="#ffffff" d="m87.517686,62.579621l-41.566111,0c-0.677857,0 -1.227273,-1.125 -1.227273,-2.513s0.549416,-2.513 1.227273,-2.513l41.566111,0c0.677857,0 1.227273,1.125 1.227273,2.513s-0.549416,2.513 -1.227273,2.513z"
+                                    / </g>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mini-brand">
+                        <a href="#" class="mini-brand-child">P</a>
+                    </li>
+                    <li>
+                        <a class="mini-fa">
+                            <span class="fa fa-code"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-2">
+            <div class="body-2">
+                <div class="navigation-bar">
+                    <h2>Settings</h2>
+                </div>
+                <div class="settings">
+                    <div class="settings-body">
+                        <div class="settings-nav">
+                            <nav>
+                                <h4>ACCOUNT</h4>
+                                <ul class="nav-column">
+                                    <li class="list"><a href="/api/user/profile/{{ id }}">Personnal Information</a></li>
+                                    <li class="list"><a class="active" href="/api/user/profile/delete/{{ id }}">Delete Account</a></li>
+                                    <li class="list"><a href="#">Views</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="settings-form">
+                            <h4>Delete User</h4>
+                            <form>
+                                <div class="form-btn">
+                                    <p>Clicking the delete button below will remove the user from the database</p>
+                                    <a href="/api/user/profile/delete/user/{{ id }}" class="btn danger">Delete User</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
