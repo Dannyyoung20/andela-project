@@ -38,7 +38,7 @@ app.use(flash());
 app.use(expressValidator());
 
 // Set html view engine 
-app.set('views', __dirname+ 'views');
+app.set('views', path.join(__dirname, 'views'));
 app.engine("hbs", hbs(process.env.HBS_OPTIONS));
 
 app.set('view engine', 'hbs');
