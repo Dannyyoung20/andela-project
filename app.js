@@ -1,21 +1,21 @@
 require("dotenv").load();
 
 // Load dependecies
-const express = require("express");
-const bodyParser = require("body-parser");
-const session = require("express-session");
-const mongoose = require("mongoose");
-const flash = require("express-flash");
-const hbs = require("express-handlebars");
-const debug = require('debug')('andela:server');
-const http = require('http');
-const path = require("path");
-const expressValidator = require("express-validator");
-const port = process.env.PORT || '3000';
-const favicon = require("serve-favicon");
-const api = require('./routes/api');
+var express = require("express");
+var bodyParser = require("body-parser");
+var session = require("express-session");
+var mongoose = require("mongoose");
+var flash = require("express-flash");
+var hbs = require("express-handlebars");
+var debug = require('debug')('andela:server');
+var http = require('http');
+var path = require("path");
+var expressValidator = require("express-validator");
+var port = process.env.PORT || '3000';
+var favicon = require("serve-favicon");
+var api = require('./routes/api');
 
-const app = express();
+var app = express();
 
 var index = require("./routes/index");
 
@@ -66,6 +66,6 @@ app.use(function(req, res, next) {
 app.set('port', port);
 
 // Run the server
-const server = http.createServer(app);
+var server = http.createServer(app);
 
 server.listen(port);
