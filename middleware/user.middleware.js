@@ -30,7 +30,6 @@ module.exports = {
     getUsers: (req, res) => {
         User.find({}, function(err, data) {
             if (err) throw err;
-            console.log(data);
             res.render('user', { 'users': data });
         });
     },
@@ -41,5 +40,27 @@ module.exports = {
             
             res.render('profile', {user: user});
         });
+    },
+
+    updateUser: function(req, res) {
+
+        dataToUpdate = {
+            firstname: req.body.fname,
+            lastname: req.body.lname,
+            email: req.body.email,
+            phone: req.body.phone
+        }
+
+        User.update({_id: req.body.id},dataToUpdate, function(err){
+            if (err) throw err;
+            res.redirect('/api/users');
+        })
+    },
+
+    deleteUser: function(req, res) {
+        User.remove({_id: req.params.id}, function(err){
+            if (err) throw err;
+            res.redirect('/');
+        })
     }
 }

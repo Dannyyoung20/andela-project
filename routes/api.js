@@ -12,7 +12,8 @@ router.route('/create-user')
     })
     .post(userController.postUser);
 
-router.put('/user/profile/:id', function(req, res) { res.redirect('/') })
+router.post('/user/profile/:id', userController.updateUser);
+router.get('/user/profile/delete/user/:id', userController.deleteUser);
 
 
 module.exports = router;
