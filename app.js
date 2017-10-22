@@ -7,12 +7,10 @@ var session = require("express-session");
 var mongoose = require("mongoose");
 var flash = require("express-flash");
 var hbs = require("express-handlebars");
-var debug = require('debug')('andela:server');
 var http = require('http');
 var path = require("path");
 var expressValidator = require("express-validator");
 var port = process.env.PORT || '3000';
-var favicon = require("serve-favicon");
 var api = require('./routes/api');
 
 var app = express();
@@ -40,7 +38,7 @@ app.use(flash());
 app.use(expressValidator());
 
 // Set html view engine 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', __dirname+ 'views');
 app.engine("hbs", hbs(process.env.HBS_OPTIONS));
 
 app.set('view engine', 'hbs');
