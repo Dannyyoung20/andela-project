@@ -683,6 +683,8 @@ button {
     border-radius: 50%;
 }
 
+
+
 .user-form .row {
     margin: 10px 0px;
 }
@@ -723,6 +725,13 @@ button {
         border-radius: 0.375rem;
         transition: all 0.3s ease;
     }
+
+    .form {
+        width: 673px;
+        height: 350px;
+        padding: 30px 0px;
+        transform: translate(2%, 50%);
+    }
 }
 
 @media screen and (max-width: 600px){
@@ -742,6 +751,27 @@ button {
         box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
         border-radius: 0.375rem;
         transition: all 0.3s ease;
+    }
+
+    .settings-nav {
+        float: none;
+        width: 100%;
+    }
+
+    .settings-form {
+        padding: 20px;
+    }
+
+    .form {
+        width: 250px;
+        transform: translate(14%, 30%);
+        height: 400px;
+        padding: 30px;
+    }
+
+    .column-6 {
+        width: 100%;
+        padding: 10px;
     }
 
     .user-list {
